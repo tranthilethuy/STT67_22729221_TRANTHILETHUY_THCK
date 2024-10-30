@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <style>
+        [class*=col-] {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#btnDK").click(function() {
+                $("#myModal").modal();
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <img src="../IMG/HEADER.PNG" alt="" srcset="">
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-expand ">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal" id="btnDK">Đăng kí</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="title">
+            <h2>DANH SÁCH THAM GIA ĐỘI ROBOCON KHOA CNTT</h1>
+        </div>
+        <div class="row">
+            <table id="bangthanhtoan" class="table-bordered">
+                <THead>
+                    <tr>
+                        <th>STT</th>
+                        <TH>MÃ THÀNH VIÊN</TH>
+                        <th>HỌ TÊN</th>
+                        <th>LỚP</th>
+                        <th>NGÀY THAM GIA</th>
+                        <TH>ĐIỆN THOẠI</TH>
+                        <th>EMAIL</th>
+                    </tr>
+                </THead>
+                <tbody id="paymentTable">
+                    <tr>
+                        <th>1</th>
+                        <th>K16-123456789</th>
+                        <th>Tran Thanh Kha</th>
+                        <th>DHKTPM16ATT</th>
+                        <th>22/02/2022</th>
+                        <th>0909-123-123</th>
+                        <th>thanhkha@iuh.edu.vn</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <table style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th style="width: 400px;">
+                            <div class="d'flex">
+                                <p class="mb-0">SVTH:</p>
+                            </div>
+                            <div class="d-inline-block border-bottom border-dark border-2 w-50"></div>
+                        </th>
+                        <th style="width: 400px;">
+                            <div class="d-flex">
+                                <p class="mb-0">Mã số sinh viên:</p>
+                            </div>
+                            <div class="d-inline-block border-bottom border-dark border-2 w-50"></div>
+                        </th>
+                        <th style="width: 400px;">
+                            <div class="d-flex">
+                                <p class="mb-0">Lớp:DHKTPM16</p>
+                            </div>
+                            <div class="d-inline-block border-bottom border-dark border-2 w-50"></div>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="header">
+                        <h5 class="modal-title text-uppercase" id="registerModalLabel">THÔNG TIN CÁ NHÂN</h5>
+                        <button type="button " class="btn-close" data-bs-dismis="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container mt-4">
+                            <form>
+                                <div class="row mb-3">
+                                    <label for="studentID" class="col-sm-3 col-form-label">Mã thành viên:<span class="text-danger">*</span></label>
+
+                                    <div class="col sm-9">
+                                        <input type="text" name="" id="studentID" class="form-control " placeholder="Mã: K16-123456789">
+                                        <span class="text-danger" id="studentIDFeedback" style="display: none;"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="fulName" class="col-sm-3 col-form-label">Họ tên: <span class="text-danger">*</span></label>
+
+                                    <div class="col sm-9">
+                                        <input type="text" name="" id="fulName" class="form-control " placeholder="Họ tên: Tran Anh Dung">
+                                        <span class="text-danger" id="fulNameFeedback" style="display: none;"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="Lop" class="col-sm-3 col-form-label">Lớp: <span class="text-danger">*</span></label>
+
+                                    <div class="col sm-9">
+                                        <input type="text" name="" id="Lop" class="form-control " placeholder="Lớp: DHKTPM16ATT">
+                                        <span class="text-danger" id="LopFeedback" style="display: none;"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="Ngay" class="col-sm-3 col-form-label">Ngày tham gia: <span class="text-danger">*</span></label>
+
+                                    <div class="col sm-9">
+                                        <input type="text" name="" id="Ngay" class="form-control " placeholder="mm/dd/yyyy">
+                                        <span class="text-danger" id="NgayFeedback" style="display: none;"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="SDT" class="col-sm-3 col-form-label">Số điện thoại: <span class="text-danger">*</span></label>
+
+                                    <div class="col sm-9">
+                                        <input type="text" name="" id="SDT" class="form-control " placeholder="SDT: 0xxxx-xxx-xxx">
+                                        <span class="text-danger" id="SDTFeedback" style="display: none;"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="Email" class="col-sm-3 col-form-label">Email: <span class="text-danger">*</span></label>
+
+                                    <div class="col sm-9">
+                                        <input type="text" name="" id="Email" class="form-control " placeholder="Email: xxxxxx@iuh.edu.vn">
+                                        <span class="text-danger" id="EmailFeedback" style="display: none;"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" style="width: 100%;">LƯU</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
