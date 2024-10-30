@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Index</title>
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
     <script src="../JS/jquery-3.7.1.min.js"></script>
     <script src="../JS/bootstrap.min.js"></script>
@@ -25,6 +25,14 @@
             padding-left: 0;
         }
         
+        li {
+            width: 150px;
+        }
+        
+        #form1 {
+            height: 640px;
+        }
+        
         
     </style>
     <script>
@@ -32,9 +40,9 @@
             var i = 2; 
             $("#btnDK").click(function() {
                 $("#myModal").modal();
-
+    
             })
-
+    
             function kiemTraMa() {
                 var mauKT = /^([A-Z]{1}\d{2}-\d{8})$/; 
                 var maValue = $("#txtMa").val();
@@ -59,7 +67,7 @@
                 }
             }
             $("#txtMa").blur(kiemTraMa);
-
+    
             function kiemTraHT() {
                 var regex = /^[A-Z][a-z]*(\s[A-Z][a-z]*)*$/;
                 var hoten = $("#txtHT").val();
@@ -81,7 +89,7 @@
                 }
             };
             $("#txtHT").blur(kiemTraHT);
-
+    
             function kiemTraLop() {
                 var regex = /^[A-Z0-9]{11}$/;
                 var lop = $("#txtlop").val();
@@ -103,7 +111,7 @@
                 }
             }
             $("#txtlop").blur(kiemTraLop);
-
+    
             function kiemTraNgay() {
                 var regex = /^\d{2}-\d{2}-\d{4}$/;
                 var ngay = $("#txtngay").val();
@@ -125,7 +133,7 @@
                 }
             }
             $("#txtngay").blur(kiemTraNgay);
-
+    
             function kiemTraDienthoai() {
                 var regex = /^0\d{3} \d{3} \d{3}$/;
                 var dienthoai = $("#txtdt").val();
@@ -146,8 +154,8 @@
                     return true;
                 }
             }
-            $("#txtlop").blur(kiemTraDienthoai);
-
+            $("#txtdt").blur(kiemTraDienthoai);
+    
             function kiemTraDC() {
                 var regex = /^.{3,15}@iuh.edu.vn$/;
                 var diachi = $("#txtDC").val();
@@ -169,7 +177,7 @@
                 }
             }
             $("#txtDC").blur(kiemTraDC);
-
+    
             $("#btnSave").click(function() {
                 var ma = $("#txtMa").val();
                 var ht = $("#txtHT").val();
@@ -177,7 +185,7 @@
                 var ngay = $("#txtngay").val();
                 var dt = $("#txtdt").val();
                 var dc = $("#txtDC").val();
-
+    
                 var them = `
                 <tr>
                     <td>` + (i++) + `</td> 
@@ -211,6 +219,7 @@
                     <li class="nav-item"><a href="#" class="nav-link" id="btnDK">Đăng ký</a></li>
                 </ul>
             </div>
+            <h1>DANH SÁCH THAM GIA ĐỘI ROBOCON KHOA CNTT</h1>
         </div>
         <div class="row">
             <table class="table-bordered  table-hover table" id="tbDanhSach">
@@ -225,12 +234,12 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                        <td>K16-123456789</th>
-                        <td>Tran Thanh Kha</td>
-                        <td>DHKTPM116TT</td>
-                        <td>22/02/2022</td>
-                        <td>0909-123-123</td>
-                        <td>thanhkha@iuh.edu.vn</td>
+                    <td>K16-123456789</th>
+                    <td>Tran Thanh Kha</td>
+                    <td>DHKTPM116TT</td>
+                    <td>22/02/2022</td>
+                    <td>0909-123-123</td>
+                    <td>thanhkha@iuh.edu.vn</td>
                 </tr>
             </table>
         </div>
